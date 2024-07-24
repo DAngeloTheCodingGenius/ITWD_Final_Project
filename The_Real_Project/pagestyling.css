@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
     font-family: Helvetica, sans-serif;
-  }
+    overflow:hidden;
+    
+}
 
 header{
     background-color: rgb(194, 66, 66);
@@ -10,18 +12,18 @@ header{
     display: flex;
     padding: 15px;
     width: 100%;
-    justify-content: left;
+    align-items: center;
+    
 }
 
-
 header h1{
-    justify-self: left;
-    padding-right: 50%;padding-left 0%;
-
+    padding-right: 50%;
 }
 
 header a{
+    text-decoration: none;
     color: white;
+    padding: 10px;
 }
 
 nav ul{
@@ -29,6 +31,75 @@ nav ul{
     list-style: none;
 }
 
-nav a{
-    padding: 10px;  
+
+/* Intro Stuff */
+.introdiv{
+    display: block;
+    align-items: center;
+    margin-left: 5%;
+    margin: 2.5%;
+    width: 100%;
+}
+
+.homepage{  
+    display: flex; 
+    width: 60%;
+    align-items: center;  
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+
+.homepage h2{
+    /* font-family:; to be determined */
+    margin-top: 5%;
+    font-size: 3em;
+    margin-right: 80%;;
+}
+
+.p1{
+    position: relative;
+    margin-top: 5px;
+    width: 50%;
+}
+
+.img1{
+    width: 40%;
+}
+
+/* Main Body Stuff */
+.gridcontainer{
+    width: 100%;
+}
+
+.grid1{
+    display: grid;
+    grid-template-rows: 4;
+    grid-template-columns: 12;
+    grid-template-areas:
+    "box1 box1 box1 box1 box2 box2 box2 box2 box3 box3 box3 box3"
+    "box1 box1 box1 box1 box2 box2 box2 box2 box3 box3 box3 box3"
+    "box1 box1 box1 box1 box2 box2 box2 box2 box3 box3 box3 box3"   
+    ;
+}
+
+.grid1 div{
+    /* font-family:; to be determined */
+    background-color: #f0e5af;
+    border-radius: 5px ;
+    border:  solid 2px ;
+    padding: 20px;
+    margin: 15px;
+}
+
+.box1{
+    grid-area: box1;
+}
+
+.box2{
+    grid-area: box2;
+}
+
+.box3{
+    grid-area: box3;
 }
