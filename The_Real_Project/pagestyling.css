@@ -1,17 +1,19 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Helvetica, sans-serif;
-    overflow:hidden;
-    
+    font-family: Helvetica, sans-serif;  
+    width: auto;
+}
+
+body{
+    width: auto;
 }
 
 header{
     background-color: rgb(194, 66, 66);
     color: white;
     display: flex;
-    padding: 15px;
-    width: 100%;
+    padding: 25px;
     align-items: center;
     
 }
@@ -41,23 +43,39 @@ nav ul{
     width: 100%;
 }
 
+
+.introdiv2{
+    display: grid;
+    grid-template-columns: 6;
+    grid-template-rows: 4;
+    grid-template-areas:
+    "headers headers headers headers headers headers"
+    "headers headers headers headers headers headers"
+    "paragraphs paragraphs paragraphs paragraphs paragraphs paragraphs"
+    "paragraphs paragraphs paragraphs paragraphs paragraphs paragraphs"
+    ;
+    align-items: center;
+    margin-left: 5%;
+    margin: 2.5%;
+}
+
 .homepage{  
     display: flex; 
-    width: 60%;
+    width: 70%;
     align-items: center;  
     margin-top: 5px;
     margin-bottom: 5px;
     padding-bottom: 5px;
 }
 
-.homepage h2{
+.homepage h2.h2hg{
     /* font-family:; to be determined */
     margin-top: 5%;
     font-size: 3em;
     margin-right: 80%;;
 }
 
-.p1{
+div.p1hg p{
     position: relative;
     margin-top: 5px;
     width: 50%;
@@ -68,29 +86,48 @@ nav ul{
 }
 
 /* Main Body Stuff */
-.gridcontainer{
-    width: 100%;
-}
 
 .grid1{
     display: grid;
     grid-template-rows: 4;
     grid-template-columns: 12;
     grid-template-areas:
-    "box1 box1 box1 box1 box2 box2 box2 box2 box3 box3 box3 box3"
-    "box1 box1 box1 box1 box2 box2 box2 box2 box3 box3 box3 box3"
-    "box1 box1 box1 box1 box2 box2 box2 box2 box3 box3 box3 box3"   
+    "box1 box1 box1 box1 box2 box2 box2 box2 box3 box3 box3"
+    "box1 box1 box1 box1 box2 box2 box2 box2 box3 box3 box3"
+    "box1 box1 box1 box1 box2 box2 box2 box2 box3 box3 box3"  
     ;
 }
+
+.grid2{
+    display: grid;
+    grid-template-rows: 4;
+    grid-template-columns: 9;
+    grid-template-areas:
+    "box1 box1 box1 box1 box2 box2 box2 box2"
+    "box1 box1 box1 box1 box2 box2 box2 box2"
+    "box1 box1 box1 box1 box2 box2 box2 box2"  
+    ;
+}
+
 
 .grid1 div{
     /* font-family:; to be determined */
     background-color: #f0e5af;
     border-radius: 5px ;
     border:  solid 2px ;
-    padding: 20px;
+    padding: 10px;
     margin: 15px;
 }
+
+.grid2 div{
+    /* font-family:; to be determined */
+    background-color: #f0e5af;
+    border-radius: 5px ;
+    border:  solid 2px ;
+    padding: 10px;
+    margin: 15px;
+}
+
 
 .box1{
     grid-area: box1;
@@ -102,4 +139,67 @@ nav ul{
 
 .box3{
     grid-area: box3;
+}
+
+/* D'Angelo's Page Styling */
+
+
+.headers{    
+    width: 95;
+    display:grid;
+    grid-template-columns: 6;
+    grid-template-rows: 4;
+    grid-template-areas: 
+    "h21 h21 h21 h22 h22 h22"
+    "h21 h21 h21 h22 h22 h22"
+    "p11 p11 p11 p11 p11 p11"
+    "p11 p11 p11 p11 p11 p11"
+    ; 
+}
+
+.paragraphs{
+    display: grid;
+    grid-template-columns: 6;
+    grid-template-rows: 4;
+    grid-template-areas: 
+    "p11 p11 p11 p12 p12 p12"
+    "p11 p11 p11 p12 p12 p12"
+    "p11 p11 p11 p12 p12 p12"
+    "p11 p11 p11 p12 p12 p12"
+    ;   
+}
+
+.h21container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    grid-area: h21;  
+
+}
+
+.h22container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    grid-area: h22; 
+}
+
+.p11container{
+    display: flex;
+    justify-content: center;
+    grid-area: p11;
+}
+
+.p12container{
+    display: flex;
+    justify-content: center;
+    grid-area: p12;
+}
+
+.paragraphs{
+    grid-area: paragraphs;
+}
+
+.headers{
+    grid-area: headers;
 }
