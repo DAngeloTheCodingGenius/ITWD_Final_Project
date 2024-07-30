@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: Helvetica, sans-serif;  
-    width: auto;
+    width: auto;    
 }
 
 body{
@@ -109,6 +109,19 @@ div.p1hg p{
     ;
 }
 
+.grid3{
+    display: flex;
+    justify-content: center;
+    /* display: grid;
+    grid-template-rows: 4;
+    grid-template-columns: 12;
+    grid-template-areas:
+    "box1 box1 box1 box1 box2 box2 box2 box2"
+    "box1 box1 box1 box1 box2 box2 box2 box2"
+    "box1 box1 box1 box1 box2 box2 box2 box2"  
+    ; */
+}
+
 
 .grid1 div{
     /* font-family:; to be determined */
@@ -128,6 +141,15 @@ div.p1hg p{
     margin: 15px;
 }
 
+.grid3 div{
+    /* font-family:; to be determined */
+    background-color: #f0e5af;
+    border-radius: 5px ;
+    border:  solid 2px ;
+    padding: 17.5px;
+    margin: 15px;
+}
+
 
 .box1{
     grid-area: box1;
@@ -141,14 +163,40 @@ div.p1hg p{
     grid-area: box3;
 }
 
-/* D'Angelo's Page Styling */
+.box1pg3{
+    background-color: #f0e5af;
+    border-radius: 5px ;
+    border:  solid 2px ;
+    padding: 10px;
+    margin: 15px;
+}
+
+.box2pg3{
+    background-color: #f0e5af;
+    border-radius: 5px ;
+    border:  solid 2px ;
+    padding: 10px;
+    margin: 15px;
+}
+
+.box3pg3{
+    background-color: #f0e5af;
+    border-radius: 5px ;
+    border:  solid 2px ;
+    padding: 17.5px;
+    margin: 15px;
+    width: 50%;
+}
+
+/* Main Page Styling */
 
 
-.headers{    
-    width: 95;
+.headers{  
     display:grid;
-    grid-template-columns: 6;
+    column-width:2.6em ;
+    grid-template-columns: repeat(6, 1fr) ;
     grid-template-rows: 4;
+    font-size: 3em;
     grid-template-areas: 
     "h21 h21 h21 h22 h22 h22"
     "h21 h21 h21 h22 h22 h22"
@@ -171,16 +219,26 @@ div.p1hg p{
 
 .h21container{
     display: flex;
-    justify-content: center;
-    width: 100%;
+    max-width: 100%;
     grid-area: h21;  
-
+    /* padding-right: 21.2719%; */
 }
+
+.h21container h2{
+    font-family: 'DM Serif Display',Arial, Helvetica, sans-serif;  
+    text-wrap: wrap;
+}
+
+.h22container h2{
+    font-family: 'DM Serif Display',Arial, Helvetica, sans-serif;  
+    justify-self: start;
+    text-wrap: wrap;
+}
+
 
 .h22container{
     display: flex;
-    justify-content: center;
-    width: 100%;
+    max-width: 100%;
     grid-area: h22; 
 }
 
@@ -188,6 +246,14 @@ div.p1hg p{
     display: flex;
     justify-content: center;
     grid-area: p11;
+}
+
+.p11{
+    margin-right: 1.5%;
+}
+
+.p12{
+    padding-right: 1.5%;
 }
 
 .p12container{
@@ -202,4 +268,62 @@ div.p1hg p{
 
 .headers{
     grid-area: headers;
+}
+
+/* D'Angelos Page Styling */
+
+.headers3{ 
+    display: flex;
+    justify-content: center;
+}
+
+.paragraphs3{
+    display: grid;
+    grid-template-columns: 6;
+    grid-template-rows: 4;
+    grid-template-areas: 
+    "p11 p11 p11 p12 p12 p12"
+    "p11 p11 p11 p12 p12 p12"
+    "p11 p11 p11 p12 p12 p12"
+    "p11 p11 p11 p12 p12 p12"
+    ;   
+}
+
+.h21container3{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    grid-area: h21;  
+
+}
+
+.p11container3{
+    display: flex;
+    justify-content: center;
+    grid-area: p11;
+}
+
+.p12container3{
+    display: flex;
+    justify-content: center;
+    grid-area: p12;
+}
+
+.paragraphs3{
+    grid-area: paragraphs;
+}
+
+.headers3{
+    grid-area: headers;
+}
+
+.box1pg3 h1,.box2pg3 h1,.box3pg3 h1{
+    font-size: 1.25em;
+
+}
+
+.box3container{
+    display: flex;
+    justify-content: center;
+
 }
