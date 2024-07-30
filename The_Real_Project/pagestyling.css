@@ -33,6 +33,44 @@ nav ul{
     list-style: none;
 }
 
+@media  only screen and (max-width: 460px) {
+    
+
+.topnav {
+    overflow: hidden;
+    position: relative;
+    width: 500px;
+  }
+
+  .topnav #myLinks {
+    display: none;
+  }
+
+  .topnav a#prjnovbttn {
+    color: white;
+  }
+
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+
+  .topnav a.icon {
+    margin-right: 15%;
+    max-width: 32px;
+    max-height: 32px;
+    background: rgb(194, 149, 66);
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+}
+
 
 /* Intro Stuff */
 .introdiv{
