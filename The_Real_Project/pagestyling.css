@@ -9,32 +9,103 @@ body{
     width: auto;
 }
 
+
 header{
     background-color: rgb(194, 66, 66);
     color: white;
     display: flex;
     padding: 25px;
     align-items: center;
+    justify-content: left;
     
 }
 
-header h1{
+div#prjnovbttn{
+    font-family: 'DM Serif Display',Arial, Helvetica, sans-serif;
+    font-size: 1.8em;
     padding-right: 50%;
+    text-wrap: nowrap;
+    align-content: center;
 }
 
-header a{
-    text-decoration: none;
-    color: white;
-    padding: 10px;
+div#prjnovbttn a{
+    font-family: 'DM Serif Display',Arial, Helvetica, sans-serif;
 }
 
-nav ul{
+div#myLinks{
+    text-wrap: nowrap;
     display: flex;
-    list-style: none;
 }
 
+div#myLinks a{
+    padding: 5%;
+}
+
+.topnav{
+    display: flex;
+}
+
+.topnav a:hover {
+    color: gold;
+}
+
+.topnav a{
+    padding: 2.5%;
+    text-decoration: none;
+    color:white;
+}
+
+.topnav a.icon{
+    display:none;
+}
+
+/* Homepage media queries */
 @media  only screen and (max-width: 460px) {
+    .h2hg{
+        margin-right: 5%;
+    }
+
+    img{
+        max-width: 20vw;
+        margin-right: 10%;
+    }
     
+    .introdiv{
+    width: 97%;
+    display: block;
+    align-items: center;
+    margin-left: 5%;
+    margin: 2.5%;
+    }
+
+    .topnavigation{
+ 
+    }
+
+    .gridcontainer{
+
+    }
+
+    .homepage h2.h2hg{
+        font-family: 'DM Serif Display',Arial, Helvetica, sans-serif;
+        margin-top: 5%;
+        font-size: 3em;
+        margin-right: 40%;
+    }
+
+    .homepage{  
+        display: flex; 
+        width: 70%;
+        align-items: center;  
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding-bottom: 5px;
+    }
+
+    .p1hg p{
+        display: inline;
+        
+    }
 
 .topnav {
     overflow: hidden;
@@ -63,23 +134,167 @@ nav ul{
     max-width: 32px;
     max-height: 32px;
     background: rgb(194, 149, 66);
-    display: block;
     position: absolute;
+    display: block;
     right: 0;
     top: 0;
   }
 
 }
 
+@media only screen and (max-width:1039px) {
+    .h2hg{
+        margin-right: 5%;
+    }
 
-/* Intro Stuff */
-.introdiv{
+    img{
+        width: 22.5vw;
+    }
+    
+    .introdiv{
+    width: 97%;
     display: block;
     align-items: center;
     margin-left: 5%;
     margin: 2.5%;
-    width: 100%;
+    }
+
+    .topnavigation{
+ 
+    }
+
+    .gridcontainer{
+
+    }
+
+    .homepage h2.h2hg{
+        font-family: 'DM Serif Display',Arial, Helvetica, sans-serif;
+        margin-top: 5%;
+        font-size: 3em;
+        margin-right: 40%;
+    }
+
+    .homepage{  
+        display: flex; 
+        width: 70%;
+        align-items: center;  
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding-bottom: 5px;
+    }
+
 }
+
+@media only screen and (min-width:600px) {
+    .h2hg{
+        margin-right: 5%;
+    }
+
+    img{
+        max-width: 20vw;
+        margin-right: 10%;
+    }
+    
+    .introdiv{
+    width: 97%;
+    display: block;
+    align-items: center;
+    margin-left: 5%;
+    margin: 2.5%;
+    }
+
+    .topnavigation{
+ 
+    }
+
+    .gridcontainer{
+
+    }
+
+    .homepage h2.h2hg{
+        font-family: 'DM Serif Display',Arial, Helvetica, sans-serif;
+        margin-top: 5%;
+        font-size: 3em;
+        margin-right: 55%;
+    }
+
+    .homepage{  
+        display: flex; 
+        width: 70%;
+        align-items: center;  
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding-bottom: 5px;
+    }
+
+    .grid1{
+        display: grid;
+        grid-template-rows: 4;
+        grid-template-columns: 12;
+        grid-template-areas:
+        "box1 box1 box1 box1 box2 box2 box2 box2 box3 box3 box3"
+        "box1 box1 box1 box1 box2 box2 box2 box2 box3 box3 box3"
+        "box1 box1 box1 box1 box2 box2 box2 box2 box3 box3 box3"  
+        ;
+    }
+
+
+}
+
+@media only screen and (min-width:1039px) {
+    .h2hg{
+        margin-right: 5%;
+
+    }
+    
+    .introdiv{
+    width: 97%;
+    display: block;
+    align-items: center;
+    margin-left: 5%;
+    margin: 2.5%;
+    }
+
+    .topnavigation{
+ 
+    }
+
+    .gridcontainer{
+
+    }
+
+    .homepage h2.h2hg{
+        font-family: 'DM Serif Display',Arial, Helvetica, sans-serif;
+        margin-top: 5%;
+        font-size: 3em;
+        margin-right: 80%;
+    }
+
+    .homepage{  
+        display: flex; 
+        width: 70%;
+        align-items: center;  
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding-bottom: 5px;
+    }
+
+    .grid1{
+        display: grid;
+        grid-template-rows: 4;
+        grid-template-columns: 12;
+        grid-template-areas:
+        "box1 box1 box1 box1 box2 box2 box2 box2 box3 box3 box3"
+        "box1 box1 box1 box1 box2 box2 box2 box2 box3 box3 box3"
+        "box1 box1 box1 box1 box2 box2 box2 box2 box3 box3 box3"  
+        ;
+    }
+
+
+}
+
+
+
 
 
 .introdiv2{
@@ -97,21 +312,9 @@ nav ul{
     margin: 2.5%;
 }
 
-.homepage{  
-    display: flex; 
-    width: 70%;
-    align-items: center;  
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding-bottom: 5px;
-}
 
-.homepage h2.h2hg{
-    /* font-family:; to be determined */
-    margin-top: 5%;
-    font-size: 3em;
-    margin-right: 80%;;
-}
+
+
 
 div.p1hg p{
     position: relative;
@@ -124,17 +327,6 @@ div.p1hg p{
 }
 
 /* Main Body Stuff */
-
-.grid1{
-    display: grid;
-    grid-template-rows: 4;
-    grid-template-columns: 12;
-    grid-template-areas:
-    "box1 box1 box1 box1 box2 box2 box2 box2 box3 box3 box3"
-    "box1 box1 box1 box1 box2 box2 box2 box2 box3 box3 box3"
-    "box1 box1 box1 box1 box2 box2 box2 box2 box3 box3 box3"  
-    ;
-}
 
 .grid2{
     display: grid;
@@ -205,7 +397,7 @@ div.p1hg p{
     background-color: #f0e5af;
     border-radius: 5px ;
     border:  solid 2px ;
-    padding: 10px;
+    padding: 17.5px;
     margin: 15px;
 }
 
@@ -213,7 +405,7 @@ div.p1hg p{
     background-color: #f0e5af;
     border-radius: 5px ;
     border:  solid 2px ;
-    padding: 10px;
+    padding: 17.5px;
     margin: 15px;
 }
 
@@ -335,6 +527,11 @@ div.p1hg p{
 
 }
 
+.h213{
+    font-family: 'DM Serif Display',Arial, Helvetica, sans-serif;
+    font-size: 3.5em;
+}
+
 .p11container3{
     display: flex;
     justify-content: center;
@@ -357,11 +554,10 @@ div.p1hg p{
 
 .box1pg3 h1,.box2pg3 h1,.box3pg3 h1{
     font-size: 1.25em;
-
+    font-family: 'DM Serif Display',Arial, Helvetica, sans-serif;
 }
 
 .box3container{
     display: flex;
     justify-content: center;
-
 }
