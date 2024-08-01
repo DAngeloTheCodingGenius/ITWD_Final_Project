@@ -7,11 +7,12 @@
 
 body{
     width: auto;
+    background-color: #D3D7D9;
 }
 
 
 header{
-    background-color: rgb(194, 66, 66);
+    background-color: #001021;
     color: white;
     display: flex;
     padding: 25px;
@@ -41,8 +42,8 @@ div#myLinks{
     grid-column-end: auto;
 }
 
-div#myLinks a{
-    padding: 3%;
+div#myLinks div {
+    padding: 5%;
 }
 
 .topnav{
@@ -54,7 +55,7 @@ div#myLinks a{
 }
 
 .topnav a:hover {
-    color: gold;
+    color: #BE7F4B;
 }
 
 .topnav a{
@@ -83,81 +84,23 @@ div#myLinks a{
 .grid3{
     display: flex;
     justify-content: center;
-    /* display: grid;
-    grid-template-rows: 4;
-    grid-template-columns: 12;
-    grid-template-areas:
-    "box1 box1 box1 box1 box2 box2 box2 box2"
-    "box1 box1 box1 box1 box2 box2 box2 box2"
-    "box1 box1 box1 box1 box2 box2 box2 box2"  
-    ; */
 }
 
 
 .grid1 div{
     /* font-family:; to be determined */
-    background-color: #f0e5af;
+    background-color: #8DB9A1;
     border-radius: 5px ;
     border:  solid 2px ;
     padding: 10px;
     margin: 15px;
-}
-
-.grid2 div{
-    /* font-family:; to be determined */
-    background-color: #f0e5af;
-    border-radius: 5px ;
-    border:  solid 2px ;
-    padding: 10px;
-    margin: 15px;
-}
-
-.grid3 div{
-    /* font-family:; to be determined */
-    background-color: #f0e5af;
-    border-radius: 5px ;
-    border:  solid 2px ;
-    padding: 17.5px;
-    margin: 15px;
+    transition-property: height;
+    transition-duration: 6s;
 }
 
 
-.box1{
-    grid-area: box1;
-}
 
-.box2{
-    grid-area: box2;
-}
 
-.box3{
-    grid-area: box3;
-}
-
-.box1pg3{
-    background-color: #f0e5af;
-    border-radius: 5px ;
-    border:  solid 2px ;
-    padding: 17.5px;
-    margin: 15px;
-}
-
-.box2pg3{
-    background-color: #f0e5af;
-    border-radius: 5px ;
-    border:  solid 2px ;
-    padding: 17.5px;
-    margin: 15px;
-}
-
-.box3pg3{
-    background-color: #f0e5af;
-    border-radius: 5px ;
-    border:  solid 2px ;
-    padding: 17.5px;
-    margin: 15px;
-    width: 50%;
-}
 
 /* Homepage + media queries */
 div.p1hg p{
@@ -170,9 +113,63 @@ div.p1hg p{
     width: 40%;
 }
 
+.grid1{
+    transition-property: height;
+    transition-duration: 6s;
+}
 
+
+.box1{
+    grid-area: box1;
+    transition-property: height;
+    transition-duration: 6s;
+
+}
+
+.box2{
+    grid-area: box2;
+    transition-property: height;
+    transition-duration: 6s;
+}
+
+.box3{
+    grid-area: box3;
+    transition-property: height;
+    transition-duration: 6s;
+    
+}
+
+
+.box1:hover{
+    grid-area: box1;
+    opacity: .8;
+    height: 400px; ;
+}
+
+.box2:hover{
+    grid-area: box2;
+    opacity: .8;
+    height: 400px; ;
+}
+
+.box3:hover{
+    grid-area: box3;
+    opacity: .8;
+    height: 400px; ;
+    
+}
 
 @media  only screen and (max-width: 460px) {
+    div#myLinks{
+        text-wrap: nowrap;
+        display:inherit ;
+        grid-area: mylinks;
+        grid-row-start: 5;
+        grid-row-end: 8;
+        grid-column-start: 1;
+        grid-column-end: auto;
+    }
+
     .h2hg{
         margin-right: 5%;
     }
@@ -231,7 +228,7 @@ div.p1hg p{
 
   .topnav div#prjnovbttn a {
     color: white;
-    font-size: 0.7em;
+    font-size: 0.9em;
   }
 
   .topnav a {
@@ -244,12 +241,22 @@ div.p1hg p{
     margin-right: 15%;
     max-width: 32px;
     max-height: 32px;
-    background: rgb(194, 149, 66);
+    background: #BE7F4B;
     position: absolute;
     display: block;
     right: 0;
     top: 0;
+    padding: 1.5%;
+    margin-top: 2%;
   }
+
+}
+
+@media  only screen and (min-width: 460px) {
+    .topnav a.icon{
+        display:none;
+    }
+    
 
 }
 
@@ -404,132 +411,9 @@ div.p1hg p{
 
 }
 
+
+
 /* Main Page media queries */
-/*.introdiv2{
-    display: grid;
-    grid-template-columns: 6;
-    grid-template-rows: 4;
-    grid-template-areas:
-    "header1 header1 header1 header1 header1 header1"
-    "paragraph1 paragraph1 paragraph1 paragraph1 paragraph1 paragraph"
-    "header2 header2 header2 header2 header2 header2"
-    "paragraph2 paragraph2 paragraph2 paragraph2 paragraph2 paragraph2"
-    ;
-    align-items: center;
-    margin-left: 5%;
-    margin: 2.5%;
-}
-
- .header1{  
-    display:grid;
-    column-width:2.6em ;
-    grid-template-columns: 6 ;
-    grid-template-rows: 4;
-    font-size: 3em;
-    grid-template-areas: 
-    "h21 h21 h21 h21 h21 h21"    
-    "h21 h21 h21 h21 h21 h21"    
-    "h21 h21 h21 h21 h21 h21"    
-    "h21 h21 h21 h21 h21 h21"    
-    ; 
-}
-
-.header2{  
-    display:grid;
-    column-width:2.6em ;
-    grid-template-columns: 6;
-    grid-template-rows: 4;
-    font-size: 3em;
-    grid-template-areas: 
-    "h22 h22 h22 h22 h22 h22"
-    "h22 h22 h22 h22 h22 h22"
-    "h22 h22 h22 h22 h22 h22"
-    "h22 h22 h22 h22 h22 h22"   
-    ; 
-}
-
-
-.paragraph1{
-    grid-area: paragraph1;
-    display: grid;
-    grid-template-columns: 6;
-    grid-template-rows: 4;
-    grid-template-areas: 
-    "p11 p11 p11 p11 p11 p11"
-    "p11 p11 p11 p11 p11 p11"
-    "p11 p11 p11 p11 p11 p11"
-    "p11 p11 p11 p11 p11 p11"
-    ;   
-}
-
-.paragraph2{
-    grid-area: paragraph2;
-    display: grid;
-    grid-template-columns: 6;
-    grid-template-rows: 4;
-    grid-template-areas: 
-    "p12 p12 p12 p12 p12 p12"
-    "p12 p12 p12 p12 p12 p12"
-    "p12 p12 p12 p12 p12 p12"
-    "p12 p12 p12 p12 p12 p12"    
-}
-
-.h21container{
-    display: flex;
-    max-width: 100%;
-    grid-area: h21;  
-}
-
-.h22container{
-    display: flex;
-    max-width: 100%;
-    grid-area: h22; 
-}
-
-
-.h21container div{
-    font-family: 'DM Serif Display',Arial, Helvetica, sans-serif;  
-    text-wrap: wrap;
-}
-
-.h22container div{
-    font-family: 'DM Serif Display',Arial, Helvetica, sans-serif;  
-    justify-self: start;
-    text-wrap: wrap;
-}
-
-
-
-.p11container{
-    display: flex;
-    justify-content: center;
-    grid-area: p11;
-}
-
-.p12container{
-    display: flex;
-    justify-content: center;
-    grid-area: p12;
-}
-
-
-.p11{
-    margin-right: 1.5%;
-}
-
-.p12{
-    padding-right: 1.5%;
-}
-
-
-.paragraphs{
-    grid-area: paragraphs;
-}
-
-.headers{
-    grid-area: headers;
-} */
-
 
 @media  only screen and (max-width: 600px) {
 
@@ -872,4 +756,29 @@ div.p1hg p{
 .box3container{
     display: flex;
     justify-content: center;
+}
+
+.box1pg3{
+    background-color: #DEE1E3;
+    border-radius: 5px ;
+    border:  solid 2px ;
+    padding: 17.5px;
+    margin: 15px;
+}
+
+.box2pg3{
+    background-color: #DEE1E3;
+    border-radius: 5px ;
+    border:  solid 2px ;
+    padding: 17.5px;
+    margin: 15px;
+}
+
+.box3pg3{
+    background-color: #DEE1E3;
+    border-radius: 5px ;
+    border:  solid 2px ;
+    padding: 17.5px;
+    margin: 15px;
+    width: 50%;
 }
